@@ -20,6 +20,6 @@ public class DemoController {
     @GetMapping("/data")
     public String getData(){
     
-        return "Demo Data";
+            return "Demo Data";
     }
 }
