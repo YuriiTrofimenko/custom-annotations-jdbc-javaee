@@ -1,0 +1,12 @@
+Фикс для подключения приложения Java к СУБД SQL Server через JDBC.
+Подходящая версия драйвера - sqljdbc4.jar (тестил с Java8 + Sql Server 2014) - подключить к проекту.
+Файл sqljdbc_auth.dll положить просто в корень проекта, подключение к проекту не требуется.
+Образец строки подключения:
+
+"jdbc:sqlserver://WIN-MPSA8PU541E\\SQLEXPRESS1;"
+                    + "databaseName=TestDb;integratedSecurity=false;user=sa;password=1"
+
+В любой версии Windows зайти в меню "все приложения" - папка с Sql Server - Sql Server Configuration Manager -
+службы Sql Server - Обозреватель Sql Server. Если не запущен - запустить
+(в свойствах на вкладке "служба" - режим запуска - авто, на вкладке "вход" - пуск).
+Ну и служба самого экземпляра должна быть в запущеном состоянии.
